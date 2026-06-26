@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panduan - INVASI 2026</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    //navbar
+    <header class="navbar">
+      <div class="logo">INVASI</div>
+      <nav class="nav-links">
+        <a href="main.html">Utama</a>
+        <a href="kompetisi.html">Kompetisi</a>
+        <a href="panduan.html" class="active">Panduan</a>
+        <a href="#">Talkshow & Webinar Nasional</a>
+        <a href="#">FAQ</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <div class="idea-logo reveal">
+          <img src="aset/logo.png" alt="Logo INVASI 2026" />
+        </div>
+        <h2 class="tagline reveal">
+          "Symphony of Youth Innovation: Kolaborasi Generasi Muda dalam Sains
+          Interdisipliner dan Pendidikan STEM untuk Pembangunan Indonesia yang
+          Berkelanjutan"
+        </h2>
+      </div>
+    </section>
+
+    <section class="page-header">
+      <h1 class="reveal">BUKU PANDUAN</h1>
+    </section>
+
+    <section class="kompetisi-section">
+      <div class="container">
+        <div class="kompetisi-grid">
+          <div class="kompetisi-card reveal">
+            <h3>ESAI MAHASISWA</h3>
+            <div class="panduan-cover">
+              <a
+                href="https://drive.google.com/file/d/1n22UVvzx8vUzAKsCTB4GnojpVZ6EuPmY/view?usp=drive_link"
+                target="_blank"
+              >
+                <img
+                  src="aset/guideline-esai-mahasiswa.png"
+                  alt="Guideline Esai Mahasiswa"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="kompetisi-card reveal">
+            <h3>POSTER</h3>
+            <div class="panduan-cover">
+              <a
+                href="https://drive.google.com/drive/folders/1DIANRJC9nRBnBcqQ8FOYlBtGw83NH_Gh?usp=drive_link"
+                target="_blank"
+              >
+                <img src="aset/guideline-poster.png" alt="Guideline Poster" />
+              </a>
+            </div>
+          </div>
+
+          <div class="kompetisi-card reveal">
+            <h3>ESAI SISWA</h3>
+            <div class="panduan-cover">
+              <a
+                href="https://drive.google.com/drive/folders/1ICZTsUzREhig6YJSRAEhkUn5x-AHGLAw?usp=drive_link"
+                target="_blank"
+              >
+                <img
+                  src="aset/guideline-esai-siswa.png"
+                  alt="Guideline Esai Siswa"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="kompetisi-card reveal">
+            <h3>INFOGRAFIS UMUM</h3>
+            <div class="panduan-cover">
+              <a
+                href="https://drive.google.com/drive/folders/1HxMJqzIldiYFq4DCjf5pABHcgnuVy5H8?usp=drive_link"
+                target="_blank"
+              >
+                <img
+                  src="aset/guideline-infografis.png"
+                  alt="Guideline Infografis Umum"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="kompetisi-card reveal">
+            <h3>LKTI MAHASISWA</h3>
+            <div class="panduan-cover">
+              <a
+                href="https://drive.google.com/drive/folders/1RlPRvIPK1ybUs5gv1GADsX-509X-vHiz?usp=drive_link"
+              >
+                <img
+                  src="aset/guideline-lkti-mahasiswa.png"
+                  alt="Guideline LKTI Mahasiswa"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="kompetisi-card reveal">
+            <h3>LKTI SISWA</h3>
+            <div class="panduan-cover">
+              <a
+                href="https://drive.google.com/drive/folders/1lYN2NIuCuEdb0hZEfozBGHTd7HrrhExd?usp=drive_link"
+                target="_blank"
+              >
+                <img
+                  src="aset/guideline-lkti-siswa.png"
+                  alt="Guideline LKTI Siswa"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        reveals.forEach((el) => observer.observe(el));
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        document.body.style.backgroundPositionY = scrollY * 0.4 + "px";
+      });
+    </script>
+  </body>
+</html>

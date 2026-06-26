@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kompetisi - INVASI 2026</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">INVASI</div>
+      <nav class="nav-links">
+        <a href="main.html">Utama</a>
+        <a href="kompetisi.html" class="active">Kompetisi</a>
+        <a href="panduan.html">Panduan</a>
+        <a href="#">Talkshow & Webinar Nasional</a>
+        <a href="#">FAQ</a>
+      </nav>
+    </header>
+
+        <section class="hero">
+      <div class="hero-content">
+        <div class="idea-logo reveal">
+          <img src="aset/logo.png" alt="Logo INVASI 2026" />
+        </div>
+
+    <section class="page-header">
+      <h1 class="reveal">KATEGORI LOMBA INVASI</h1>
+    </section>
+
+    <section class="kompetisi-section">
+      <div class="container">
+        <div class="kompetisi-grid">
+          <div class="kompetisi-card reveal">
+            <h3>ESAI MAHASISWA</h3>
+            <div class="kompetisi-icon">
+              <img src="aset/icon-esai.png" alt="Esai Mahasiswa" />
+            </div>
+            <div class="kompetisi-buttons">
+              <button class="btn-outline">SELENGKAPNYA</button>
+             <a href="https://forms.gle/Wtq7DfGMCgy4MAgy7"target="_blank" class="btn-fill">
+               DAFTAR</a>
+            </div>
+          </div>
+
+
+
+          <div class="kompetisi-card reveal">
+            <h3>ESAI SISWA</h3>
+            <div class="kompetisi-icon">
+              <img src="aset/icon-esai.png" alt="Esai Siswa" />
+            </div>
+            <div class="kompetisi-buttons">
+              <button class="btn-outline">SELENGKAPNYA</button>
+             <a href="https://forms.gle/mhqPaD8wyNmpSJa68"target="_blank" class="btn-fill">
+               DAFTAR</a>
+            </div>
+          </div>
+
+                    <div class="kompetisi-card reveal">
+            <h3>LKTI MAHASISWA</h3>
+            <div class="kompetisi-icon">
+              <img src="aset/icon-lkti.png" alt="LKTI Mahasiswa" />
+            </div>
+            <div class="kompetisi-buttons">
+              <button class="btn-outline">SELENGKAPNYA</button>
+             <a href="https://forms.gle/ycGoULncpJ69vETj7"target="_blank" class="btn-fill">
+               DAFTAR</a>
+            </div>
+          </div>
+
+          <div class="kompetisi-card reveal">
+            <h3>LKTI SISWA</h3>
+            <div class="kompetisi-icon">
+              <img src="aset/icon-lkti.png" alt="LKTI Siswa" />
+            </div>
+            <div class="kompetisi-buttons">
+              <button class="btn-outline">SELENGKAPNYA</button>
+             <a href="https://forms.gle/z7uFmoi7Etz564Qv5"target="_blank" class="btn-fill">
+               DAFTAR</a>
+            </div>
+          </div>
+
+
+          <div class="kompetisi-card reveal">
+            <h3>POSTER</h3>
+            <div class="kompetisi-icon">
+              <img src="aset/icon-poster.png" alt="Poster" />
+            </div>
+            <div class="kompetisi-buttons">
+              <button class="btn-outline">SELENGKAPNYA</button>
+             <a href="https://forms.gle/ykNjtQzLRy9HFqYVA"target="_blank" class="btn-fill">
+               DAFTAR</a>
+            </div>
+          </div>
+
+          <div class="kompetisi-card reveal">
+            <h3>INFOGRAFIS</h3>
+            <div class="kompetisi-icon">
+              <img src="aset/icon-infografis.png" alt="Infografis Umum" />
+            </div>
+            <div class="kompetisi-buttons">
+              <button class="btn-outline">SELENGKAPNYA</button>
+             <a href="https://forms.gle/jfaZFWk5ebuJVZpv5"target="_blank" class="btn-fill">
+               DAFTAR</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+              }
+            });
+          },
+          { threshold: 0.15 },
+        );
+        reveals.forEach((el) => observer.observe(el));
+      });
+
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        document.body.style.backgroundPositionY = scrollY * 0.4 + "px";
+      });
+    </script>
+  </body>
+</html>
